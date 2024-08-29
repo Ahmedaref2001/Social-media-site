@@ -1,0 +1,16 @@
+.profile-data {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.profile-data .img {
+  width: 200px;
+  height: 200px;
+}
+.profile-data .data-fields form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}/*# sourceMappingURL=profile.css.map */

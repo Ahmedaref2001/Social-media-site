@@ -1,0 +1,397 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.rigth-side-container::-webkit-scrollbar,
+.left-side-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.rigth-side-container::-webkit-scrollbar-track,
+.left-side-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rigth-side-container::-webkit-scrollbar-thumb,
+.left-side-container::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.rigth-side-container:hover::-webkit-scrollbar-thumb,
+.left-side-container:hover::-webkit-scrollbar-thumb {
+  background: rgba(151, 150, 150, 0.7);
+}
+
+.rigth-side-container::-webkit-scrollbar-thumb:hover,
+.left-side-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 102, 102, 0.7);
+  cursor: pointer;
+}
+
+:root {
+  --bg-theme: #eee;
+  --primary-color: #252525;
+  --second-color: #d8d6d6;
+}
+
+body.dark-them {
+  --bg-theme: #252525;
+  --primary-color: #eee;
+  --second-color: #333333;
+}
+
+body,
+.dropdown-menu,
+.navbar {
+  background-color: var(--bg-theme);
+}
+
+.nav-link,
+p,
+.dropdown-item,
+.site-theme,
+.primary-color {
+  color: var(--primary-color);
+}
+
+.second-color {
+  background-color: var(--second-color);
+}
+
+.navbar-toggler {
+  background-color: #eee;
+}
+
+.navbar {
+  z-index: 999;
+}
+
+.navbar .nav-item .nav-link {
+  font-weight: 500;
+}
+.navbar .nav-item .nav-link:hover {
+  color: dodgerblue;
+}
+.navbar .nav-item .nav-link.active {
+  color: dodgerblue;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0px 0px 5px rgb(98, 97, 97);
+}
+
+.dropdown-menu .active {
+  background-color: dodgerblue;
+}
+
+.site-theme {
+  cursor: pointer;
+}
+
+.divider {
+  margin-top: 62px;
+}
+
+.user-data .user-img {
+  width: 40px;
+  height: 40px;
+}
+
+aside {
+  width: 350px;
+}
+@media (max-width: 1100px) {
+  aside.left-side {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  aside.rigth-side {
+    display: none;
+  }
+}
+
+.rigth-side-container,
+.left-side-container {
+  width: 350px;
+  height: calc(100vh - 62px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--bg-theme);
+  z-index: 99;
+}
+.rigth-side-container.left-side-container,
+.left-side-container.left-side-container {
+  left: 0px;
+}
+.rigth-side-container.left-side-container .shortcuts img,
+.left-side-container.left-side-container .shortcuts img {
+  width: 40px;
+  height: 40px;
+}
+.rigth-side-container.rigth-side-container,
+.left-side-container.rigth-side-container {
+  right: 0px;
+}
+@media (max-width: 1100px) {
+  .rigth-side-container.left-side-container,
+  .left-side-container.left-side-container {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .rigth-side-container.rigth-side-container,
+  .left-side-container.rigth-side-container {
+    display: none;
+  }
+}
+
+article {
+  flex: 1;
+  background-color: var(--bg-theme);
+}
+article .my-story,
+article .friend-story {
+  width: 180px;
+  height: 290px;
+  cursor: pointer;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+}
+article .my-story img {
+  height: 240px;
+}
+article .my-story .add-story {
+  width: 40px;
+  height: 40px;
+  border: 5px solid var(--second-color);
+}
+article .friend-story .friend-img {
+  top: 10px;
+  left: 10px;
+  width: 45px;
+  height: 45px;
+}
+article .friend-story .friend-img img {
+  width: 100%;
+}
+article .friend-story .friend-name {
+  background-color: rgba(81, 80, 80, 0.3);
+  box-shadow: 0px -3px 5px rgba(81, 80, 80, 0.3);
+}
+article .navigation {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--second-color);
+}
+article .navigation:hover {
+  background-color: #b2b1b1;
+}
+article .navigation::before, article .navigation::after {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+article .new-post {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+article .new-post .input-post {
+  border-bottom: 1px solid #7f7f7f;
+}
+article .new-post .input-post img {
+  width: 40px;
+  height: 40px;
+}
+article .new-post .input-post input {
+  cursor: pointer;
+  outline: none;
+  padding: 12px 15px;
+}
+article .new-post .type-of-post span {
+  cursor: pointer;
+}
+
+.dark-them .new-post input {
+  background-color: #464748;
+  color: black;
+}
+.dark-them .new-post input::-moz-placeholder {
+  color: #a8a7a7;
+}
+.dark-them .new-post input::placeholder {
+  color: #a8a7a7;
+}
+
+.dark-them .navigation:hover {
+  background-color: #252525;
+}
+
+.icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon:hover {
+  background-color: #d4d3d3;
+}
+
+.dark-them .icon:hover {
+  background-color: #414141;
+}
+
+.friends-container img,
+.user-info img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.other-options {
+  border-bottom: 1px solid #969595;
+}
+.other-options img {
+  width: 35px;
+  height: 35px;
+  margin-left: -3px;
+}
+.other-options .arrow-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #c1bfbf;
+  padding-top: 2px;
+}
+.other-options .more-options.hiden {
+  display: none;
+}
+
+.dark-them .other-options {
+  border-bottom: 1px solid #696969;
+}
+.dark-them .other-options .arrow-icon {
+  background-color: #414141;
+}
+
+.friend:hover,
+.option:hover,
+.user-info:hover {
+  background-color: #c8c7c7;
+  cursor: pointer;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.dark-them .friend:hover,
+.dark-them .option:hover,
+.dark-them .user-info:hover {
+  background-color: #303030;
+  cursor: pointer;
+}
+
+.create-new-post {
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  z-index: 99999;
+  background-color: #c1bfbf;
+  cursor: pointer;
+}
+.create-new-post:hover {
+  background-color: #a8a7a7;
+}
+
+.dark-them .create-new-post {
+  background-color: #414141;
+}
+.dark-them .create-new-post:hover {
+  background-color: #353535;
+}
+
+.all-posts .post, .specific-Post .post {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  cursor: pointer;
+}
+.all-posts .post .user-img, .specific-Post .post .user-img {
+  width: 40px;
+  height: 40px;
+}
+.all-posts .post .post-body, .specific-Post .post .post-body {
+  height: 370px;
+}
+.all-posts .post .icons, .specific-Post .post .icons {
+  width: 48px;
+}
+.all-posts .post .icons .icon-1, .specific-Post .post .icons .icon-1 {
+  left: 5px;
+  z-index: 5;
+}
+.all-posts .post .icons .icon-2, .specific-Post .post .icons .icon-2 {
+  left: 20px;
+  z-index: 3;
+}
+.all-posts .post .icons .icon-3, .specific-Post .post .icons .icon-3 {
+  left: 35px;
+  z-index: 2;
+}
+.all-posts .post .post-Interaction, .specific-Post .post .post-Interaction {
+  border-bottom: 1px solid #7f7f7f;
+}
+.all-posts .post .post-footer span, .specific-Post .post .post-footer span {
+  cursor: pointer;
+}
+.all-posts .post .post-footer i, .specific-Post .post .post-footer i {
+  font-size: 22px;
+}
+.all-posts .post .post-footer .action, .specific-Post .post .post-footer .action {
+  width: 33.3333333333%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.all-posts .post .post-footer .action:hover, .specific-Post .post .post-footer .action:hover {
+  background-color: #c8c7c7;
+}
+
+.dark-them .all-posts .post .post-footer .action:hover, .dark-them .specific-Post .post .post-footer .action:hover {
+  background-color: #464646;
+}/*# sourceMappingURL=home.css.map */

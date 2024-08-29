@@ -1,0 +1,25 @@
+.all-feedbacks .feedback {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.all-feedbacks .feedback img {
+  width: 40px;
+  height: 40px;
+}
+
+.add-comment {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.dark-them .add-comment textarea {
+  background-color: #464748;
+  color: var(--primary-color);
+  border: none;
+}/*# sourceMappingURL=postDetails.css.map */
