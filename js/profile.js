@@ -3,9 +3,18 @@
 let searchParams = new URLSearchParams(window.location.search);
 const idParam=searchParams.get('id');
 
-let userId=JSON.parse(localStorage.getItem("userData")).id
+let userId=localStorage.getItem("userData")?JSON.parse(localStorage.getItem("userData")).id:null
 if(idParam){
     userId=idParam
+}
+window.onload=()=>{
+  if(!userId){
+    alert("Please login first","danger")
+    setTimeout(()=>{
+window.location=`index.html`
+    },1500)
+    
+  }
 }
 //hindel fetch user data
 function getUserData(){
@@ -24,14 +33,16 @@ function getUserData(){
         showLoader(false)
     })
 }
-getUserData()
+if(userId){
+  getUserData()
+}
 
 
 //hindel fetch posts and display in profile page
 function fetchAndDisplayPosts(){
     let allPostsContainer=document.querySelector(".all-posts")
     allPostsContainer.innerHTML=""
-    let adminId=JSON.parse(localStorage.getItem("userData")).id
+    let adminId=localStorage.getItem("userData")?JSON.parse(localStorage.getItem("userData")).id:null
     showLoader(true)
     axios.get(`https://tarmeezacademy.com/api/v1/users/${userId}/posts`).then((response)=>{
         showLoader(false)
@@ -135,4 +146,6 @@ function fetchAndDisplayPosts(){
         showLoader(false)
     })
 }
+if(userId){
 fetchAndDisplayPosts()
+}
